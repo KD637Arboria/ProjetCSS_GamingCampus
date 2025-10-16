@@ -1,0 +1,13 @@
+Sous base du fichier HTML fourni :
+
+Constituer le CSS de sorte à se rapprocher le plus possible des maquettes fournies.
+On pourra réaliser quelques animations, et s'occuper du responsive.
+
+"Dans cet exo on peut quasiment faire que du flex
+
+A partir du LES NEWSW DU CAMPU : on peut partir un peu en grid
+
+puis à nouveau flex
+puis flex pour les 4 boites .
+
+Eventuellement du grid juste avant les partenaires : 25% et 75% en display grid."

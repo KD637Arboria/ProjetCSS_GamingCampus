@@ -1,0 +1,447 @@
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter/Inter-VariableFont_opsz_wght.ttf);
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+* {
+  font-family: "Montserrat", "Inter", serif;
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+  /* min-height: 100vh; */
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  margin: 0px 7%;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* le nav li:hover n'est pas terrible, ça change la taille. Mieux vaut jouer avec les ::before, le border top coloré c'est pas pire !*/
+nav li {
+  position: relative;
+  border-width: 5px;
+  transition: 0.1s;
+}
+nav li:first-child {
+  color: rgb(95, 4, 170);
+  /* border-top: rgb(95, 4, 170) solid; */
+}
+nav li:first-child:before,
+nav li:hover::before {
+  content: "";
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  background: rgb(95, 4, 170);
+  transform: translateY(-15px);
+}
+nav li:last-child::before {
+  background: none;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 auto;
+  font-size: 0.8rem;
+}
+nav ul li {
+  margin: 10px;
+}
+nav li:last-child {
+  background: rgba(128, 128, 128, 0.35);
+  border-radius: 20px;
+  padding: 4px 8px;
+}
+header {
+  background: url(./assets/img/bg.jpg) no-repeat center/cover;
+}
+.main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  padding: 50px;
+  row-gap: 25px;
+}
+.main-header img {
+  /* max-width: 100%; */
+  height: 170px;
+}
+.main-header h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.main-header button {
+  /* Modifier à la main le texte dans les boutons ! */
+  /* Mettre du letter-spacing: ; */
+  /* mettre un effet hover sur le bouton  */
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  color: white;
+  border: 1px solid;
+  background: none;
+  padding: 5px 20px;
+  transition: 0.3s;
+}
+
+.main-header button:hover {
+  background: whitesmoke;
+  color: black;
+  transition: 0.2s;
+}
+.header-text {
+  display: flex;
+  justify-content: center;
+  margin: 20px 15%;
+  font-weight: bold;
+}
+.header-text p {
+  font-size: 0.9rem;
+  text-align: center;
+  width: 80%;
+}
+
+.icon-part {
+  /* display: flex; */
+  background: #050101f9;
+  color: white;
+  padding: 2% 11%;
+  /* Là ça va être l'éclate de gérer la taile des différentes font */
+}
+
+/* .icon-part-container {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+/* } */
+.icon-part-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0px auto;
+}
+.lip-logo img {
+  height: 130px;
+}
+
+.icon-part h3 {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  margin-bottom: 2px;
+}
+
+.list-icon-part p {
+  text-align: center;
+  font-size: 0.8rem;
+  width: 70%;
+  margin: 0 auto;
+}
+.icon-part button {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: white;
+  border: 1px solid;
+  background: none;
+  padding: 5px 20px;
+  transition: 0.3s;
+  margin: 30px;
+}
+
+.icon-part button:hover {
+  background: whitesmoke;
+  color: black;
+  transition: 0.2s;
+}
+
+.news-part {
+  background: gainsboro;
+  display: grid;
+  padding: 50px 10%;
+  margin: 0 auto;
+}
+.header-news {
+  display: grid;
+  grid-template-columns: 68% 32%;
+}
+.left-part h2 {
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.left-part p {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.right-part button {
+  /* width: 80%; */
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  border: 2px solid black;
+  background: none;
+  padding: 10px 30px;
+  transition: 0.3s;
+  margin: 10px;
+}
+
+.right-part button:hover {
+  background: black;
+  color: whitesmoke;
+}
+
+.main-news {
+  display: grid;
+  position: relative;
+}
+
+.main-news-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 60px auto;
+}
+.mn-pic img {
+  margin-bottom: 20px;
+  width: 70%;
+}
+.main-news-container h4 {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  width: 65%;
+}
+.main-news-container p {
+  width: 55%;
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.main-news-container .link {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  position: absolute;
+  top: 95%;
+}
+.link a {
+  text-decoration: none;
+  color: purple;
+  transition: 0.3s;
+}
+.link a:hover {
+  color: hotpink;
+}
+
+/* ******************************** Contact ******************************** */
+.contact {
+  padding: 30px 10%;
+}
+.contact-container {
+  display: grid;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  position: relative;
+}
+.contact-container::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 95%;
+  background: lightgray;
+
+  bottom: -45px;
+  transform: translateX(2.5%);
+}
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.contact-list .list {
+  margin: 0px 10px;
+}
+.list h5 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 0px;
+}
+.list p {
+  margin-top: 10px;
+}
+.infos-p li {
+  margin-left: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.infos-p li a {
+  text-decoration: none;
+}
+
+.contact-list .list p,
+a {
+  font-size: 0.7rem;
+  font-weight: bold;
+  width: 60%;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.list h6 {
+  margin-top: 10px;
+}
+.contact-list .list h6 {
+  margin-bottom: 10px;
+}
+.network {
+  margin: 20px 0px 20px 0px;
+}
+.footer-logos {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin-bottom: 30px;
+}
+/* Pour coller le copyright ça aurait été plus simple de revoir la partie HTML !! Je joue le jeu de ne pas trouver comment la modifier aisément */
+.copyright {
+  margin-bottom: -10px;
+}
+/* ************ CONTACT-MEDIAS ************ */
+.contact-medias {
+  display: flex;
+}
+.medias-text h3 {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.medias-text p {
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+.medias-logos {
+  display: flex;
+  margin: 10px auto;
+  width: 70%;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.medias-logos img {
+  width: 92%;
+}
+
+/* ******************************** FOOTER ******************************** */
+footer {
+  background: #050101f9;
+  padding: 30px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+footer h3 {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+footer ul {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer ul img {
+  width: 90%;
+}
+
+/* ************ RESPONSIVE SOUS 700 pixels ************ */
+@media screen and (max-width: 700px) {
+  nav,
+  .contact {
+    display: none;
+  }
+
+  .icon-part-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-news-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-news-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-news-container h4,
+  .main-news-container p {
+    font-size: 0.8rem;
+    width: 90%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  .main-news-container p {
+    font-size: 0.65rem;
+  }
+  .main-news-container .mn-pic img {
+    width: 70%;
+  }
+
+  .main-news-container .link {
+    position: unset;
+  }
+
+  a {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 685px) {
+  .header-news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-news h2,
+  p {
+    text-align: center;
+  }
+}
